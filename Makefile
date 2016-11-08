@@ -6,7 +6,7 @@ RM     = rm -rf
 all: test
 test: nvp
 	$(emacs) -Q -batch --eval '(progn (push "nvp" load-path))' \
-	-L . -l ert -l test/ocaml-tests.el                         \
+	-L . -l ert -l test/lua-tests.el                           \
 	-f ert-run-tests-batch-and-exit
 	$(RM) -rf nvp
 
